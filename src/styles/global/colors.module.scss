@@ -1,0 +1,36 @@
+$colors: (
+	white: (
+		100: #fff
+	),
+	black: (
+		100: #000
+	),
+	gray: (
+		100: #666,
+		200: #ccc,
+		300: #333
+	),
+	dark_blue: (
+		100: #0b0d17
+	),
+	orange: (
+		100: #ff9505
+	),
+	lime: (
+		100: #f8f32b
+	)
+);
+
+// FUNCTION
+@function color($color, $tone: 1) {
+	@return map-get(map-get($colors, $color), $tone);
+}
+
+// Exports all colors for use in JavaScript
+:export {
+	@each $theme, $color in $colors {
+		@each $tone, $value in $color {
+			#{$theme}_#{$tone}: #{color($theme, $tone)};
+		}
+	}
+}

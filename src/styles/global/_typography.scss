@@ -1,0 +1,104 @@
+@use './settings' as *;
+@use '../mixins/' as *;
+@use '../functions/' as *;
+
+/* outfit-300 - latin */
+@font-face {
+	font-family: 'Outfit';
+	font-style: normal;
+	font-weight: 300;
+	src: url('/assets/fonts/outfit-v6-latin-300.woff2') format('woff2');
+}
+/* outfit-500 - latin */
+@font-face {
+	font-family: 'Outfit';
+	font-style: normal;
+	font-weight: 500;
+	src: url('/assets/fonts/outfit-v6-latin-500.woff2') format('woff2');
+}
+
+// Headers
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $header-font;
+	margin: 0;
+}
+
+// Paragraphs
+p {
+	font-size: rem(18);
+}
+
+ol,
+ul {
+	@include kill-bullets;
+}
+
+.wysiwyg {
+	ol,
+	ul {
+		list-style-position: outside;
+		padding-left: 15px;
+		margin-bottom: 20px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		li {
+			font-size: $base-font-size;
+			@include line-height(24, 16);
+			padding-left: 5px;
+			margin: 0 0 10px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&::marker {
+				color: red;
+			}
+
+			ul,
+			ol {
+				margin-top: 10px;
+			}
+		}
+	}
+
+	ul {
+		list-style-type: disc;
+
+		ul {
+			list-style-type: circle;
+
+			ul {
+				list-style-type: square;
+			}
+		}
+	}
+
+	ol {
+		list-style-type: decimal;
+		padding-left: 20px;
+
+		& > li {
+			&::marker {
+				@include font-weight(bold);
+				font-size: 0.944em;
+			}
+		}
+
+		ol {
+			list-style-type: lower-alpha;
+
+			ol {
+				list-style-type: lower-roman;
+			}
+		}
+	}
+}

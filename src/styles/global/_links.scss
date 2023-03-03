@@ -1,0 +1,19 @@
+@use './settings' as *;
+@use '../mixins' as *;
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  transition: $ts $te;
+
+  @include hover {
+    color: red;
+  }
+
+  &:disabled,
+  &[disabled] {
+    opacity: .5;
+    pointer-events: none;
+  }
+}

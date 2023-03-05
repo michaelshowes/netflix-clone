@@ -1,0 +1,82 @@
+.header {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	top: 0;
+	background-image: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0.7) 10%,
+		transparent
+	);
+	color: #e5e5e5;
+	@include font-weight(light);
+	width: 100%;
+	height: 41px;
+	padding: 0 4%;
+	z-index: 2;
+	transition: background-color 0.4s;
+
+	@include from(9) {
+		height: 68px;
+	}
+
+	.mobileMenu {
+		background: none;
+		color: inherit;
+		width: 30px;
+		margin-right: 16px;
+
+		@include from(7) {
+			display: none;
+		}
+	}
+
+	.logo {
+		max-width: 92px;
+		margin-right: 25px;
+	}
+
+	nav {
+		ul {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.primaryNav {
+		display: none;
+		margin-right: auto;
+
+		@include from(7) {
+			display: block;
+		}
+
+		li {
+			font-size: 0.875rem;
+			margin-left: 18px;
+		}
+	}
+
+	.active {
+		pointer-events: none;
+		font-weight: 500;
+	}
+
+	.secondaryNav {
+		li {
+			cursor: pointer;
+
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+
+		.searchIcon {
+			width: 24px;
+		}
+
+		.avatar {
+			border-radius: 3px;
+		}
+	}
+}

@@ -1,29 +1,7 @@
-import localFont from 'next/font/local';
+import '../styles/main.scss';
 
-const netflixSans = localFont({
-	src: [
-		{
-			path: '../../public/fonts/NetflixSans-Regular.woff2',
-			weight: '400',
-			style: 'normal'
-		},
-		{
-			path: '../../public/fonts/NetflixSans-Medium.woff2',
-			weight: '500',
-			style: 'normal'
-		},
-		{
-			path: '../../public/fonts/NetflixSans-Light.woff2',
-			weight: '300',
-			style: 'normal'
-		},
-		{
-			path: '../../public/fonts/NetflixSans-Bold.woff2',
-			weight: '700',
-			style: 'normal'
-		}
-	]
-});
+import { Header } from '@components';
+import { netflixSans } from '@utils/fonts';
 
 export const metadata = {
 	title: 'Netflix Clone',
@@ -40,7 +18,10 @@ export default function RootLayout({
 			lang='en'
 			className={netflixSans.className}
 		>
-			<body>{children}</body>
+			<body>
+				<Header />
+				{children}
+			</body>
 		</html>
 	);
 }

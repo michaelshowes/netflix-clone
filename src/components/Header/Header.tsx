@@ -36,7 +36,7 @@ export default function Header({}: HeaderProps) {
 				<div className={scss.logo}>
 					<Link href={'/'}>
 						<Image
-							src='images/netflix-logo.svg'
+							src='/images/netflix-logo.svg'
 							width={100}
 							height={100}
 							alt='neflix logo'

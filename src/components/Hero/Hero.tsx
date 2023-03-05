@@ -8,9 +8,7 @@ type HeroProps = {};
 export default function Hero({}: HeroProps) {
 	return (
 		<div className={scss.hero}>
-			<div className={scss.image}>
-				<Image />
-			</div>
+			<div className={scss.image}>{/* <Image /> */}</div>
 		</div>
 	);
 }

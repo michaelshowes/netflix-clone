@@ -1,8 +1,7 @@
 @mixin hover {
-  &:active,
-  &:focus,
-  &:hover,
-  &.-focused {
-    @content;
-  }
+	&:focus,
+	&:hover,
+	&.-focused {
+		@content;
+	}
 }

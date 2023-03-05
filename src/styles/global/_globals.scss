@@ -22,14 +22,15 @@ body {
 	position: relative;
 	// min-width: 360px;
 	min-height: 100vh;
-	@include font-weight(light);
+	// @include font-weight(light);
 	// color: $body-color;
-	// background-color: $body-bg-color;
-	font-family: $body-font;
+	background-color: #141414;
 	font-size: 100%;
 	line-height: 1.15;
 	text-rendering: optimizeSpeed;
 	margin: 0;
+
+	height: 200vh;
 }
 
 // Figure element reset
@@ -57,7 +58,7 @@ img[width][height] {
 // Let SVG scale without boundaries
 svg,
 img[src$='.svg'] {
-	// width: 100%;
+	width: 100%;
 	max-width: none;
 	height: auto;
 }

@@ -2,21 +2,6 @@
 @use '../mixins/' as *;
 @use '../functions/' as *;
 
-/* outfit-300 - latin */
-@font-face {
-	font-family: 'Outfit';
-	font-style: normal;
-	font-weight: 300;
-	src: url('/assets/fonts/outfit-v6-latin-300.woff2') format('woff2');
-}
-/* outfit-500 - latin */
-@font-face {
-	font-family: 'Outfit';
-	font-style: normal;
-	font-weight: 500;
-	src: url('/assets/fonts/outfit-v6-latin-500.woff2') format('woff2');
-}
-
 // Headers
 h1,
 h2,
@@ -24,7 +9,6 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $header-font;
 	margin: 0;
 }
 

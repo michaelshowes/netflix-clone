@@ -1,25 +1,25 @@
 $slices: (
-  0:    0px,
-  1:    100px,
-  2:    200px,
-  3:    360px,
-  4:    400px,
-  5:    500px,
-  6:    600px,
-  7:    768px,
-  8:    800px,
-  9:    900px,
-  10:   1000px,
-  11:   1100px,
-  12:   1200px,
-  13:   1300px,
-  14:   1400px,
-  15:   1500px,
-  16:   1600px,
-  17:   1700px,
-  18:   1800px,
-  19:   1920px,
-  20:   2000px,
+	0: 0px,
+	1: 100px,
+	2: 200px,
+	3: 360px,
+	4: 400px,
+	5: 500px,
+	6: 600px,
+	7: 768px,
+	8: 800px,
+	9: 900px,
+	10: 1000px,
+	11: 1100px,
+	12: 1200px,
+	13: 1300px,
+	14: 1400px,
+	15: 1500px,
+	16: 1600px,
+	17: 1700px,
+	18: 1800px,
+	19: 1920px,
+	20: 2000px
 );
 
 // colors
@@ -30,8 +30,6 @@ $text-color: yellow;
 // type variables
 $arial: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 $outfit: 'Outfit', sans-serif;
-$body-font: $outfit;
-$header-font: $outfit;
 $base-font-size: 15px;
 
 // Layout
@@ -44,5 +42,5 @@ $desktop-break: 12;
 $border-radius: 3px;
 
 // transitions
-$ts: .15s; // transition speed
+$ts: 0.15s; // transition speed
 $te: ease-in-out; // transition ease

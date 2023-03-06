@@ -17,7 +17,8 @@ export function ViewPortProvider({ children }: { children: React.ReactNode }) {
 		window.addEventListener('resize', handleResize);
 
 		return () => window.removeEventListener('resize', handleResize);
-	}, []);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [window.innerWidth]);
 
 	return (
 		<ViewportContext.Provider value={width}>

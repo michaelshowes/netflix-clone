@@ -1,0 +1,21 @@
+// Row Component
+
+.row {
+	margin: 3vw 0;
+	margin-left: 100px;
+	width: max-content;
+
+	h2 {
+		font-size: 1.125rem;
+		font-weight: 400;
+		margin-bottom: 14px;
+	}
+
+	.movies {
+		display: flex;
+
+		.movie {
+			width: 330px;
+		}
+	}
+}

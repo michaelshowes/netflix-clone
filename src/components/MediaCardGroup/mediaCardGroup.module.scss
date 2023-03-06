@@ -1,0 +1,33 @@
+// MediaCardGroup Component
+
+.mediaCardGroup {
+	cursor: pointer;
+	position: relative;
+	width: 330px;
+	padding: 0 0.2vw;
+
+	&:hover {
+		.mediaCardContainer {
+			pointer-events: all;
+			top: 50%;
+			padding: 0;
+			opacity: 1;
+			transform: translateX(-50%) translateY(-50%);
+		}
+	}
+
+	.mediaCardContainer {
+		pointer-events: none;
+		position: absolute;
+		padding: 0 56.5px 56.5px;
+		top: 0;
+		left: 50%;
+		width: 145%;
+		transform-origin: center center;
+		opacity: 0;
+		transform: translateX(-50%);
+		z-index: 9999;
+		transition: 0.3s ease;
+		transition-delay: 0.5s;
+	}
+}

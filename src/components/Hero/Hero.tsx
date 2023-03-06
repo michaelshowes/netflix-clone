@@ -7,23 +7,23 @@ import { Media } from '../../../types';
 import Image from 'next/image';
 import { baseUrl } from '@constants/movie';
 import { useViewport } from '@utils/useViewport';
+import { IoPlaySharp } from 'react-icons/io5';
+import { BiInfoCircle } from 'react-icons/bi';
 
 export default function Hero({ category: media }: { category: Media }) {
 	const width = useViewport();
-
-	console.log(width);
 
 	return (
 		<section className={scss.hero}>
 			<div className={scss.image}>
 				<Image
 					src={
-						width! > 768
-							? `${baseUrl}${media.backdrop_path}`
-							: `${baseUrl}${media.poster_path}`
+						width! < 900
+							? `${baseUrl}${media.poster_path}`
+							: `${baseUrl}${media.backdrop_path}`
 					}
 					width={1920}
-					height={width! > 768 ? 1080 : 2880}
+					height={width! > 900 ? 1080 : 2880}
 					alt='Media backdrop'
 				/>
 			</div>
@@ -33,8 +33,14 @@ export default function Hero({ category: media }: { category: Media }) {
 				<p>{media.overview}</p>
 
 				<div className={scss.buttons}>
-					<button className={scss.play}>Play</button>
-					<button className={scss.info}>More Info</button>
+					<button className={scss.play}>
+						<IoPlaySharp />
+						<span>Play</span>
+					</button>
+					<button className={scss.info}>
+						<BiInfoCircle />
+						<span>More Info</span>
+					</button>
 				</div>
 			</div>
 		</section>

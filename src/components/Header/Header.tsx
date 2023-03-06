@@ -15,10 +15,8 @@ type HeaderProps = {};
 export default function Header({}: HeaderProps) {
 	const currentRoute = usePathname();
 	const { ref, inView } = useInView({
-		threshold: 1
+		threshold: 0
 	});
-
-	console.log(currentRoute);
 
 	return (
 		<>
@@ -36,9 +34,8 @@ export default function Header({}: HeaderProps) {
 				<div className={scss.logo}>
 					<Link href={'/'}>
 						<Image
-							src='/images/netflix-logo.svg'
-							width={100}
-							height={100}
+							src='images/netflix-logo.svg'
+							fill
 							alt='neflix logo'
 							aria-label='Netflix'
 						/>
@@ -58,6 +55,7 @@ export default function Header({}: HeaderProps) {
 									className={
 										currentRoute === route.path ? scss.active : scss.inactive
 									}
+									prefetch={false}
 								>
 									{route.name}
 								</Link>

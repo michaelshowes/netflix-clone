@@ -1,9 +1,24 @@
 import { Hero } from '@components';
+import getMediaCategories from '@utils/requests';
 
-export default function Home() {
+export default async function Home() {
+	const {
+		netflixOriginals,
+		trendingNow,
+		topRated,
+		actionMovies,
+		comedyMovies,
+		horrorMovies,
+		romanceMovies,
+		documentaries
+	} = await getMediaCategories();
+
+	const randomHeroMedia =
+		netflixOriginals[Math.floor(Math.random() * netflixOriginals.length)];
+
 	return (
 		<main>
-			<Hero />
+			<Hero category={randomHeroMedia} />
 		</main>
 	);
 }

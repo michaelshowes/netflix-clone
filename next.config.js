@@ -3,6 +3,7 @@ const nextConfig = {
 	experimental: {
 		appDir: true
 	},
+	reactStrictMode: true,
 	// Enables support for importing SVGs as components
 	webpack(config) {
 		config.module.rules.push({
@@ -19,7 +20,7 @@ const nextConfig = {
 				hostname: 'localhost'
 			}
 		],
-		domains: []
+		domains: ['image.tmdb.org']
 	},
 	sassOptions: {
 		prependData: `
